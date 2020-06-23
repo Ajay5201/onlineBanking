@@ -1,7 +1,7 @@
 # onlineBanking
 DONE USING
-  *JAVA
-  *ORACLE(sql)
+  *JAVA and
+  ORACLE(sql)
   
  NOTE
    *If it shows some error in the statements form
