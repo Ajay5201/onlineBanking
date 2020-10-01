@@ -66,7 +66,9 @@ public class SIGNUP extends JFrame {
                                             /*ResultSet rs=ps.executeQuery();
                                             if(rs.next()){
                                                 JOptionPane.showMessageDialog(null,"LOGINNNNNNNNNNNNN");
-                                                
+                                                 ps.setString(3, t3.getText());
+						  ps.setString(3, t3.getText());
+						   ps.setString(3, t3.getText());
                                             }
                                             else
                                             {
