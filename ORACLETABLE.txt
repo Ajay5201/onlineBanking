@@ -10,7 +10,9 @@ CREATE TABLE ACCOUNT_INFO
     PAN_NO varchar2(10),
 	CONSTRAINT PK_ACCOUNT_INFO PRIMARY KEY (ACC_NO);
 	insert into account_info values(0,'AJAY',638222,'CBE',(TO.DATE('16.JUN.1994)),'M',189741234512,'BUSSINESS','FGHT123456');
+	
 	*************************************************************
+	
 CREATE TABLE ACCOUNT1
    (	ACC_NO NUMBER, 
 	BALANCE NUMBER(10,2) NOT NULL, 
@@ -25,6 +27,7 @@ CREATE TABLE ACCOUNT1
 	  INSERT INT0 ACCOUNT VALUES(183100001,'10000','SAVINGS','TO_DATE('25.JUN.1992'),'RAMANATHAPURAM','1025','ICIN000123');
 	  
 	  *********************************************************************
+	  
 CREATE TABLE  tlogin 
    (	user_id VARCHAR2(20) NOT NULL ENABLE, 
 	password VARCHAR2(20) NOT NULL ENABLE,
@@ -32,7 +35,9 @@ CREATE TABLE  tlogin
 		CONSTRAINT PK_Tlogin2 PRIMARY KEY (ACC_NO),
 		CONSTRAINT FK_ACCO23 FOREIGN KEY (ACC_NO)
 	  REFERENCES ACCOUNT_INFO (ACC_NO) ON DELETE CASCADE) ;
+	  
 	  ***************************************************************
+	  
 CREATE TABLE  TRANSACTION
       (TRX_ID NUMBER(6),
    ACC_NO NUMBER NOT NULL ENABLE,
@@ -44,21 +49,27 @@ CREATE TABLE  TRANSACTION
     CONSTRAINT FK_TRANSACTION FOREIGN KEY (ACC_NO)
      REFERENCES  ACCOUNT_INFO (ACC_NO) ON DELETE CASCADE ENABLE);
 	 insert into transaction(0,183100001,sysdate,560,'withdraw',0);
+	 
    *****************************************************
+   
 CREATE TABLE COMPLAIN(
   2  ACC_NO NUMBER,
   3  COMPLAIN VARCHAR2(100),
   4  DATE1 DATE,
   5  CONSTRAINT FK_ACCO23 FOREIGN KEY (ACC_NO)
   6  REFERENCES ACCOUNT_INFO (ACC_NO) ON DELETE CASCADE) ;
+  
   ****************************************************************************
+  
   CREATE TABLE RESPONSE(
    ACC_NO NUMBER,
     RESPONSE VARCHAR2(50),
     DATE1 DATE,
     CONSTRAINT FK_ACCO234 FOREIGN KEY (ACC_NO)
    REFERENCES ACCOUNT_INFO (ACC_NO) ON DELETE CASCADE) ;
+   
    **************************************************************************************
+   
    create table account_cheque(
     ACC_NO NUMBER,
     CHEQUE_NUMBER NUMBER(9),
@@ -66,7 +77,9 @@ CREATE TABLE COMPLAIN(
     CONSTRAINT PK_ACCCOUNT_CHEQUE PRIMARY KEY (ACC_NO),
     CONSTRAINT FK_ACCOUNT_CHEQUE FOREIGN KEY (ACC_NO)
      REFERENCES ACCOUNT_INFO (ACC_NO) ON DELETE CASCADE);
+     
 	 **********************************************************************
+	 
 	 create table cheque_order(
 	 ACC_NO NUMBER,
 	 CHEQUE_NUMBER NUMBER(9),
@@ -74,7 +87,9 @@ CREATE TABLE COMPLAIN(
 	 DATE1 DATE,
 	  CONSTRAINT CHEQUE_ORDER FOREIGN KEY (ACC_NO)
      REFERENCES ACCOUNT_INFO (ACC_NO) ON DELETE CASCADE);
+     
 	 ****************************************************
+	 
 	create table admin(
         USERNAME VARCHAR2(20),
         PASSWORD VARCHAR2(20)
